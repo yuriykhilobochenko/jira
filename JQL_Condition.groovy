@@ -26,7 +26,7 @@ final JqlQueryBuilder builder = JqlQueryBuilder.newBuilder();
 builder.where().issueType("Test").and().status("In Progress","To Do").and().summary("" + issue + "")
 
 	Query query = builder.buildQuery();
-  log.error(query)
+  log.info(query)
 boolean bool = true;
 SearchResults results = searchService.search(currentUser, query, PagerFilter.getUnlimitedFilter());
 WorkflowTransitionUtil workflowTransitionUtil = (WorkflowTransitionUtil) JiraUtils.loadComponent(WorkflowTransitionUtilImpl.class);
@@ -34,11 +34,11 @@ WorkflowTransitionUtil workflowTransitionUtil = (WorkflowTransitionUtil) JiraUti
 results.getIssues().each() {
 
    MutableIssue PIssue = issueService.getIssue(currentUser,it.key).getIssue();
-   log.error(PIssue);
+   log.info(PIssue);
   bool = false
 
 }
 
-log.error(bool);
+log.info(bool);
 
 passesCondition =  bool;
