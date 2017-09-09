@@ -6,6 +6,10 @@
           <option name="url" value="https://github.com/yuriykhilobochenko/jira" />
           <option name="userName" value="" />
         </UrlAndUserName>
+        <UrlAndUserName>
+          <option name="url" value="https://github.com/Azure-Samples/powerbi-angular-client" />
+          <option name="userName" value="" />
+        </UrlAndUserName>
       </list>
     </option>
     <option name="cloneParentDir" value="D:\Repo" />
